@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    word2vec:
+        build: ./serving
+        container_name: word2vec-serving
+        command: uwsgi --http :5010 --wsgi-file server.py --callable APP --master --processes 2 --threads 2
+        volumes:
+            - ./serving/volume:/code
+        ports:
+            - 5010:5010
+

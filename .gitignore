@@ -1,0 +1,5 @@
+**/*.pyc
+**/__pycache__
+serving/volume/model/cn/*
+serving/volume/model/tw/*
+serving/volume/log/request.log
