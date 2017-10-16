@@ -109,3 +109,4 @@ def handle_404(req, res):
 APP = falcon.API()
 APP.add_route('/similar_words/{lang}/{text}/', SimilarWordsResource())
 APP.add_route('/similarity/{lang}/{text1}/{text2}', SimilarityResource())
+APP.add_sink(handle_404, '')
